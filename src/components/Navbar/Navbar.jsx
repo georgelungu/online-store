@@ -26,34 +26,34 @@ const Navbar = () => {
                 </div>
                 {/* Women products link. */}
                 <div className="item">
-                    <Link to="/products/1">Women</Link>
+                    <Link className="link" to="/products/1">Women</Link>
                 </div>
                 {/* Men products link. */}
                 <div className="item">
-                    <Link to="/products/2">Men</Link>
+                    <Link className="link" to="/products/2">Men</Link>
                 </div>
                 {/* Children products link. */}
                 <div className="item">
-                    <Link to="/products/3">Children</Link>
+                    <Link className="link" to="/products/3">Children</Link>
                 </div>
             </div>
             {/* LOGO START */}
             <div className='center'>
-                <Link to="/">MyHomeDeco</Link>
+                <Link className="link" to="/">MyHomeDeco</Link>
             </div>
             {/* LOGO END */}
             <div className='right'>
-                <div className='center'>
-                    <Link to="/">HomePage</Link>
+                <div className='item'>
+                    <Link className="link" to="/">HomePage</Link>
                 </div>
-                <div className='center'>
-                    <Link to="/">About</Link>
+                <div className='item'>
+                    <Link className="link" to="/">About</Link>
                 </div>
-                <div className='center'>
-                    <Link to="/">Contact</Link>
+                <div className='item'>
+                    <Link className="link" to="/">Contact</Link>
                 </div>
-                <div className='center'>
-                    <Link to="/">Stores</Link>
+                <div className='item'>
+                    <Link className="link" to="/">Stores</Link>
                 </div>
                 <div className="icons">
                     <SearchIcon />

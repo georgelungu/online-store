@@ -10,6 +10,8 @@ import Product from "./pages/Product/Product";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
+import "./App.scss"
+
 {/* The page structure. Outlet will be each element between Navbar and Footer */}
 const Layout = () => 
 {
