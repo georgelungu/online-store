@@ -1,0 +1,9 @@
+.navbar{
+    height: 80px;
+
+    // You can do nested styling because of npm install sass and .scss extension
+    .wrapper{
+        padding: 10px 30px;
+        display: flex;
+    }
+}
