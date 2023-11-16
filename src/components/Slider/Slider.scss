@@ -1,0 +1,42 @@
+.slider{
+    height: calc(100vh - 80px);
+    width: 100vh;
+    position: relative;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+
+
+    .container{
+        width: 300vw; // Because there are 3 images.
+        height: 100%;
+        display: flex;
+        // Because of no rules for the img elements, it will overflow if we don't apply these.
+        img{
+            width: 100vw;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .icons{
+        width: fit-content;
+        display: flex;
+        position: absolute;
+        left: 45vw;
+        right: 0;
+        bottom: 100px;
+        gap: 10px;
+        margin: auto;
+
+        .icon{
+            width: 50px;
+            height: 50px;
+            border: 1px solid #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    }
+}
