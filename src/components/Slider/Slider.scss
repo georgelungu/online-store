@@ -2,15 +2,12 @@
     height: calc(100vh - 80px);
     width: 100vh;
     position: relative;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-
 
     .container{
         width: 300vw; // Because there are 3 images.
         height: 100%;
         display: flex;
+        transition: all 1s ease;
         // Because of no rules for the img elements, it will overflow if we don't apply these.
         img{
             width: 100vw;
@@ -23,7 +20,7 @@
         width: fit-content;
         display: flex;
         position: absolute;
-        left: 45vw;
+        left: 47.5vw;
         right: 0;
         bottom: 100px;
         gap: 10px;
