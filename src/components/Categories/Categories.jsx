@@ -4,6 +4,7 @@ import './Categories.scss'
 import { Link } from 'react-router-dom'
 
 // this page needs to be updated manually.
+// all images have a 1600 width!
 
 const Categories = () => {
     return (

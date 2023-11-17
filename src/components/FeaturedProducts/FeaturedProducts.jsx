@@ -3,8 +3,6 @@ import React from 'react'
 import './FeaturedProducts.scss'
 import Card from '../Card/Card'
 
-// Left at 00:46:15
-
 const FeaturedProducts = ({ type }) => {
 
     const data = 
