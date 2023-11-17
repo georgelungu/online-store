@@ -3,7 +3,7 @@ import React from 'react'
 import './Categories.scss'
 import { Link } from 'react-router-dom'
 
-// this page needs to be updated manually
+// this page needs to be updated manually.
 
 const Categories = () => {
     return (
