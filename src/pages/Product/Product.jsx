@@ -43,7 +43,7 @@ const Product = () => {
       </div>
       <div className="right">
         <h1>Title</h1>
-        <span>$50</span>
+        <span className='price'>$50</span>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero minima ex voluptas. Voluptates sit laboriosam accusamus! Incidunt expedita, vero dicta, a, error sed vitae ex pariatur blanditiis magnam optio autem quos officia?
         </p>
@@ -55,7 +55,7 @@ const Product = () => {
         <button className="add">
           <AddShoppingCartIcon /> ADD TO CART
         </button>
-        <div className="link">
+        <div className="links">
           <div className="item">
             <FavoriteBorderIcon /> ADD TO WISHLIST
           </div>
@@ -69,7 +69,7 @@ const Product = () => {
           <span>Tag: T-Shirt, Women, Top</span>
         </div>
         <hr />
-        <div className="details">
+        <div className="info">
           <span>DESCRIPTION</span>
           <hr />
           <span>ADDITIONAL INFORMATION</span>
