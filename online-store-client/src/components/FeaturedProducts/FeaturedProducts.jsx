@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+
+// import dotenv from 'dotenv'
 
 import './FeaturedProducts.scss'
+
 import Card from '../Card/Card'
 
+import axios from 'axios'
+
 const FeaturedProducts = ({ type }) => {
+    const url = import.meta.env.VITE_APP_API_URL;
+    const token = import.meta.env.VITE_APP_API_TOKEN
 
     const data = 
     [
@@ -41,6 +48,30 @@ const FeaturedProducts = ({ type }) => {
             price: 12,
         }
     ]
+
+    // dotenv.config()
+
+    const [ products, setProducts ] = useState([])
+
+    useEffect(() => {
+      const fetchData = async () => {
+        try 
+        {
+            const data = await axios.get(url + "/products",{
+                headers: {
+                    Authorization: "bearer " + token
+                }
+            })
+            console.log(data)
+        } 
+        catch (error) 
+        {
+            console.log(error)
+        }
+      }
+      fetchData()
+    }, [])
+    
 
     return (
         <div className='featuredProducts'>
