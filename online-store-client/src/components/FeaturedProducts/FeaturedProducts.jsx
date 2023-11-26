@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 // import dotenv from 'dotenv'
 
@@ -6,37 +6,19 @@ import './FeaturedProducts.scss'
 
 import Card from '../Card/Card'
 
-import axios from 'axios'
+import useFetch from '../../hooks/useFetch'
 
 const FeaturedProducts = ({ type }) => {
-    const url = import.meta.env.VITE_APP_API_URL;
-    const token = import.meta.env.VITE_APP_API_TOKEN
 
-    // dotenv.config()
-
-    const [ data, setData ] = useState([])
-
-    useEffect(() => {
-      const fetchData = async () => {
-        try 
-        {
-            const res = await axios.get(url + `/products?populate=*&[filters][type][$eq]=${type}`,{
-                headers: {
-                    Authorization: "bearer " + token
-                }
-            })
-            console.log(res.data.data)
-            // get products from strapi and use them into your frontend by using an useState
-            setData(res.data.data)
-        } 
-        catch (error) 
-        {
-            console.log(error)
-        }
-      }
-      fetchData()
-    }, [])
+    console.log(type)
+    // const url = import.meta.env.VITE_APP_API_URL;
+    const url = `/products?populate=*&[filters][type][$eq]=${type}`;
+    const token = import.meta.env.VITE_APP_API_TOKEN;
     
+    const { data, loading, error } = useFetch(url)
+
+    // here it returns null and i dont know why
+    console.log(data)
 
     return (
         <div className='featuredProducts'>
@@ -47,9 +29,11 @@ const FeaturedProducts = ({ type }) => {
                 </p>
             </div>
             <div className="bottom">
-                {data.map(item => (
-                    <Card item={item} key={item.id}/>
-                ))}
+            {loading && "loading"} 
+
+            {data?.map(item => (
+            <Card item={item} key={item.id}/>
+            ))}
             </div>
         </div>
     )
