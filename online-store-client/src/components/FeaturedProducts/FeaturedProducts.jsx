@@ -20,7 +20,7 @@ const FeaturedProducts = ({ type }) => {
       const fetchData = async () => {
         try 
         {
-            const res = await axios.get(url + "/products?populate=*",{
+            const res = await axios.get(url + `/products?populate=*&[filters][type][$eq]=${type}`,{
                 headers: {
                     Authorization: "bearer " + token
                 }
