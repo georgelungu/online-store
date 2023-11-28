@@ -3,7 +3,6 @@ import axios from 'axios'
 
 import { makeRequest } from '../makeRequest'
 
-
 const useFetch = (url) => {
 
     const [ data, setData ] = useState(null)

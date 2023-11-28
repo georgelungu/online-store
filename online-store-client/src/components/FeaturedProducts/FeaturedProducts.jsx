@@ -29,11 +29,15 @@ const FeaturedProducts = ({ type }) => {
                 </p>
             </div>
             <div className="bottom">
-            {loading && "loading"} 
-
-            {data?.map(item => (
-            <Card item={item} key={item.id}/>
-            ))}
+                {error
+                    ? "Something went wrong!"
+                    : loading
+                    ? "loading"
+                    : data?.map(item => (
+                        <Card item={item} key={item.id}/>
+                        )
+                    )
+                }
             </div>
         </div>
     )
