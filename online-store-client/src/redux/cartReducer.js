@@ -16,7 +16,7 @@ export const cartSlice = createSlice({
       }
       else
       {
-        state.push(action.payload)
+        state.products.push(action.payload)
       }
       
     },
