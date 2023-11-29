@@ -9,12 +9,15 @@ import useFetch from '../../hooks/useFetch'
 const List = ({ subCats, maxPrice, sort, catId }) => {
 
   const filter = subCats
-    .map((item) => `&[filters][sub_categories][id][$eq]=${item}`)
-    .join("");
+  .map(item => `&[filters][sub_categories][id][$eq]=${item}`) 
+  .join("");
 
-  const { data, loading, error } = useFetch(
-    `/products?populate=*&[filters][categories][id]=${catId}${filter}&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`
-  );
+const sortParam = sort ? `&sort=price:${sort}` : '';
+
+const {data, loading, error} = useFetch(
+  `/products?populate=*&[filters][categories][id]=${catId}${filter}&[filters][price][$lte]=${maxPrice}${sortParam}`
+);
+
 
   // console.log("category id: " + catId)
   // console.log("sub category: " + subCats)
