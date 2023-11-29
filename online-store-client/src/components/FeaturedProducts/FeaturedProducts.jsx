@@ -18,7 +18,7 @@ const FeaturedProducts = ({ type }) => {
     const { data, loading, error } = useFetch(url)
 
     // here it returns null and i dont know why
-    console.log(data)
+    console.log("featured products data: " + data)
 
     return (
         <div className='featuredProducts'>

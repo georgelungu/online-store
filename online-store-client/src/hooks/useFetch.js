@@ -13,7 +13,7 @@ const useFetch = (url) => {
     useEffect(() => {
 
         // const url = import.meta.env.VITE_APP_API_URL;
-        const token = import.meta.env.VITE_APP_API_TOKEN;
+        // const token = import.meta.env.VITE_APP_API_TOKEN;
         
         const fetchData = async () => {
             try 

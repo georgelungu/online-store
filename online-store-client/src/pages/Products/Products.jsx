@@ -28,7 +28,7 @@ const Products = () => {
         : selectedSubCats.filter((item) => item !== value))
   }
 
-  console.log(selectedSubCats)
+  console.log("selected sub categories: " + selectedSubCats)
 
   return (
     <div className='products'>
@@ -39,7 +39,12 @@ const Products = () => {
           <h2>Product Categories</h2>
           {data?.map(item => (
             <div className="inputItem" key={item.id}>
-              <input type='checkbox' id={item.id} value={item.id} onChange={handleChange}/>
+              <input 
+                type='checkbox' 
+                id={item.id} 
+                value={item.id} 
+                onChange={handleChange}
+              />
               <label htmlFor={item.id}>{item.attributes.title}</label>
             </div>
           ))}
@@ -49,7 +54,12 @@ const Products = () => {
           <h2>Filter by price</h2>
           <div className="inputItem">
             <span>0</span>
-            <input type="range" min={0} max={1000} onChange={(e) => setMaxPrice(e.target.value)}/>
+            <input 
+              type="range" 
+              min={0} 
+              max={1000} 
+              onChange={(e) => setMaxPrice(e.target.value)}
+            />
             <span>{maxPrice}</span>
           </div>
         </div>
@@ -57,11 +67,23 @@ const Products = () => {
           {/* Filter by highest/lowest first */}
           <h2>Sort by price</h2>
           <div className="inputItem">
-            <input type="radio" id='asc' value='asc' name='price' onChange={e => setSort('asc')}/>
+            <input 
+              type="radio" 
+              id='asc' 
+              value='asc' 
+              name='price' 
+              onChange={e => setSort('asc')}
+            />
             <label htmlFor='asc'>Lowest first</label>
           </div>
           <div className="inputItem">
-            <input type="radio" id='desc' value='desc' name='price' onChange={e => setSort('desc')}/>
+            <input 
+              type="radio" 
+              id='desc' 
+              value='desc' 
+              name='price' 
+              onChange={e => setSort('desc')}
+            />
             <label htmlFor='desc'>Highest first</label>
           </div>
         </div>
@@ -72,7 +94,7 @@ const Products = () => {
           src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
           alt=""
         />
-        <List catId={catId} maxPrice={maxPrice} sort={sort}/>
+        <List catId={catId} maxPrice={maxPrice} sort={sort} subCats={selectedSubCats}/>
       </div>
     </div>
   )

@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 
 import './Card.scss'
 
-// left at 02:07:52
-
 const Card = ({ item }) => {
   const uploadUrl = import.meta.env.VITE_APP_UPLOAD_URL
 
