@@ -11,9 +11,15 @@ import Cart from '../Cart/Cart';
 
 import "./Navbar.scss"
 
+import { useSelector } from "react-redux"
+
+// left at 02:27:40
+
 const Navbar = () => {
 
     const [open, setOpen] = useState(false)
+
+    const products = useSelector(state => state.cart.products)
 
     return (
         <div className='navbar'>
@@ -67,7 +73,7 @@ const Navbar = () => {
                         {/* In the tutorial it is onClick={() => setOpen(!open)*/}
                         <div className="cartIcon" onClick={() => setOpen(prev => !prev)}>
                             <ShoppingCartOutlinedIcon />
-                            <span>0</span>
+                            <span>{products.length}</span>
                         </div>
                     </div>
                 </div>
