@@ -6,11 +6,16 @@ import './Cart.scss'
 
 import { useSelector } from "react-redux"
 
-// left at 02:44:00
-
 const Cart = () => {
 
   const products = useSelector(state => state.cart.products)
+
+  const totalPrice = () =>
+  {
+    let total = 0;
+    products.forEach((item) => (total += item.quantity * item.price));
+    return total.toFixed(2)
+  }
 
   const upload = import.meta.env.VITE_APP_UPLOAD_URL;
 
@@ -30,7 +35,7 @@ const Cart = () => {
       ))}
       <div className="total">
         <span>SUBTOTAL</span>
-        <span>$123</span>
+        <span>${totalPrice()}</span>
       </div>
       <button>PROCEED TO CHECKOUT</button>
       <span className="reset">Reset Cart</span>
