@@ -13,8 +13,6 @@ import "./Navbar.scss"
 
 import { useSelector } from "react-redux"
 
-// left at 02:27:40
-
 const Navbar = () => {
 
     const [open, setOpen] = useState(false)
