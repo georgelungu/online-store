@@ -7,6 +7,10 @@ import './Cart.scss'
 import { removeItem, resetCart } from '../../redux/cartReducer'
 import { useDispatch, useSelector } from "react-redux"
 
+import {loadStripe} from '@stripe/stripe-js';
+
+import axios from 'axios'
+
 const Cart = () => {
 
   const products = useSelector(state => state.cart.products)
@@ -19,7 +23,28 @@ const Cart = () => {
     return total.toFixed(2)
   }
 
+  const stripePromise = loadStripe("pk_test_51OJN9xIMhOoclKgQcqiCmU6DQsvGd5Dp0hNo3EfBp6oClwoYOhnqcLeefoZt8f6OmqiUsCYiRscE0NpRk5Ha5KZB00zdYixjJY");
+
   const upload = import.meta.env.VITE_APP_UPLOAD_URL;
+
+  const handlePayment = async () =>
+  {
+    try 
+    {
+      const stripe = await stripePromise
+
+      const response = await axios.post("/orders", {
+        products
+      })
+      await stripe.redirectToCheckout({
+        sessionId: response.data.stripeSession.id
+      })
+    } 
+    catch (error) 
+    {
+      console.log(error)
+    }
+  }
 
   return (
     <div className='cart'>
@@ -39,7 +64,7 @@ const Cart = () => {
         <span>SUBTOTAL</span>
         <span>${totalPrice()}</span>
       </div>
-      <button>PROCEED TO CHECKOUT</button>
+      <button onClick={handlePayment}>PROCEED TO CHECKOUT</button>
       <span className="reset" onClick={() => dispatch(resetCart())}>Reset Cart</span>
     </div>
   )

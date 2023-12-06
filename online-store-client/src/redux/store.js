@@ -1,4 +1,3 @@
-// left at 02:50:05
 import cartReducer from './cartReducer'
 import { configureStore } from '@reduxjs/toolkit'
 import {
@@ -12,7 +11,9 @@ import {
   REGISTER,
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
-import { PersistGate } from 'redux-persist/integration/react'
+import Stripe from 'stripe';
+
+const stripe = new Stripe('sk_test_51OJN9xIMhOoclKgQVxCutC3AHu0UM02FVQamQWix8qehfaSsgu8r8HXz6OCUzBiDQMm8zOoHIVkDwx1IDvUagb7V00sM7Fuftg');
 
 const persistConfig = {
   key: 'root',
