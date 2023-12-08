@@ -5,6 +5,9 @@ import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined'
 import './Cart.scss'
 
 import { removeItem, resetCart } from '../../redux/cartReducer'
+
+import { makeRequest } from "../../makeRequest"; 
+
 import { useDispatch, useSelector } from "react-redux"
 
 import {loadStripe} from '@stripe/stripe-js';
@@ -33,16 +36,22 @@ const Cart = () => {
     {
       const stripe = await stripePromise
 
-      const response = await axios.post("/orders", {
+      const response = await makeRequest.post("/orders", {
         products
       })
+
       await stripe.redirectToCheckout({
         sessionId: response.data.stripeSession.id
       })
     } 
     catch (error) 
     {
-      console.log(error)
+      console.error('Error in handlePayment:', error);
+      if (error.response) 
+      {
+        console.error('Response data:', error.response.data);
+        console.error('Status code:', error.response.status);
+      }
     }
   }
 
