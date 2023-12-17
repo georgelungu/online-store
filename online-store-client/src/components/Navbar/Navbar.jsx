@@ -35,15 +35,15 @@ const Navbar = () => {
                     </div>
                     {/* Women products link. */}
                     <div className="item">
-                        <Link className="link" to="/products/1">Women</Link>
+                        <Link className="link" to="/products/1">office</Link>
                     </div>
                     {/* Men products link. */}
                     <div className="item">
-                        <Link className="link" to="/products/2">Men</Link>
+                        <Link className="link" to="/products/2">living</Link>
                     </div>
                     {/* Children products link. */}
                     <div className="item">
-                        <Link className="link" to="/products/3">Children</Link>
+                        <Link className="link" to="/products/3">kitchen</Link>
                     </div>
                 </div>
                 {/* LOGO START */}

@@ -25,7 +25,7 @@ const FeaturedProducts = ({ type }) => {
             <div className="top">
                 <h1>{type} products</h1>
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate magni tempore porro reiciendis quas aliquid quae dolore architecto earum qui necessitatibus, quis cumque modi impedit perferendis? Commodi porro eius sequi molestias rem!
+                    Elevate your lifestyle with our featured and trending products—a carefully curated selection of the latest innovations and stylish essentials. Stay ahead of the curve, embracing the best in modern living with these must-have items that effortlessly blend functionality and flair.
                 </p>
             </div>
             <div className="bottom">

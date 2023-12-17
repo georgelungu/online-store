@@ -8,9 +8,9 @@ const Footer = () => {
         <div className="top">
             <div className="item">
                 <h1>Categories</h1>
-                <span>Women</span>
-                <span>Men</span>
-                <span>Shoes</span>
+                <span>office</span>
+                <span>living</span>
+                <span>kitchen</span>
                 <span>Accessories</span>
                 <span>New Arrivals</span>
             </div>
@@ -24,11 +24,16 @@ const Footer = () => {
             </div>
             <div className="item">
                 <h1>About</h1>
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ducimus, fuga dignissimos nisi omnis blanditiis eveniet repellendus, ullam, nihil dolor vel voluptate ex ab?</span>
+                <span>
+                    Welcome to our store, where innovation meets style. We pride ourselves on curating a collection of premium products that seamlessly blend cutting-edge technology with timeless design. Explore our world and discover a perfect fusion of form and function, tailored to elevate your lifestyle
+                </span>
             </div>
             <div className="item">
             <h1>Contact</h1>
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ducimus, fuga dignissimos nisi omnis blanditiis eveniet repellendus, ullam, nihil dolor vel voluptate ex ab?</span>
+            <div className="mail">
+                <input type='text' placeholder='lungu.andrei1896@gmail.com'/>
+                <button>TEXT ME</button>
+            </div>
             </div>
         </div>
         <div className="bottom">

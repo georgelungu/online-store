@@ -18,6 +18,9 @@ const Products = () => {
   const { data, loading, error } = useFetch(`/sub-categories?[filters][categories][id][$eq]=${catId}`)
   console.log(data)
 
+  // const { data1, loading1, error1 } = useFetch(`/categories`)
+  // console.log(data1)
+
   const handleChange = (e) => {
     const value = e.target.value
     const isChecked = e.target.checked

@@ -12,23 +12,23 @@ const Categories = () => {
           <div className="col">
             <div className="row">
               <img
-                src="https://images.pexels.com/photos/818992/pexels-photo-818992.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                src="/img/Floating_Object_B_8.png"
                 alt=""
               />
               <button>
-                <Link className="link" to="/products/1">
+                <Link className="link" to="/">
                   Sale
                 </Link>
               </button>
             </div>
             <div className="row">
               <img
-                src="https://images.pexels.com/photos/2036646/pexels-photo-2036646.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                src="/img/Portable_Wireless_Charger_1.jpg"
                 alt=""
               />
               <button>
                 <Link to="/products/1" className="link">
-                  Women
+                  Office
                 </Link>
               </button>
             </div>
@@ -37,12 +37,12 @@ const Categories = () => {
             <div className="row">
               {" "}
               <img
-                src="https://images.pexels.com/photos/1813947/pexels-photo-1813947.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                src="/img/Vintage_Foldable_Hanging_Lamp_7.jpg"
                 alt=""
               />
               <button>
-                <Link to="/products/1" className="link">
-                  New Season
+                <Link to="/products/2" className="link">
+                  Living
                 </Link>
               </button>
             </div>
@@ -52,12 +52,12 @@ const Categories = () => {
               <div className="col">
                 <div className="row">
                   <img
-                    src="https://images.pexels.com/photos/1192609/pexels-photo-1192609.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                    src="/img/Portable_Fruit_Mixer_2.jpg"
                     alt=""
                   />
                   <button>
-                    <Link to="/products/1" className="link">
-                      Men
+                    <Link to="/products/3" className="link">
+                      Kitchen
                     </Link>
                   </button>
                 </div>
@@ -66,12 +66,12 @@ const Categories = () => {
                 <div className="row">
                   {" "}
                   <img
-                    src="https://images.pexels.com/photos/2703202/pexels-photo-2703202.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                    src="/img/Ultrasonic_Cleaner_3.jpg"
                     alt=""
                   />
                   <button>
-                    <Link to="/products/1" className="link">
-                      Accessories
+                    <Link to="/" className="link">
+                      Bathroom
                     </Link>
                   </button>
                 </div>
@@ -79,12 +79,12 @@ const Categories = () => {
             </div>
             <div className="row">
               <img
-                src="https://images.pexels.com/photos/1159670/pexels-photo-1159670.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                src="/img/Reusable_Straw_Silicone_2.jpg"
                 alt=""
               />
               <button>
-                <Link to="/products/1" className="link">
-                  Shoes
+                <Link to="/" className="link">
+                  Utilities
                 </Link>
               </button>
             </div>

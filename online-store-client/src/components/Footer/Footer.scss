@@ -13,6 +13,26 @@
             text-align: justify;
             font-size: 14px;
 
+            .mail{
+                display: flex;
+                flex-direction: row;
+            }
+          
+            input{
+                padding: 10px;
+                border: none;
+                border-radius: 5px 0 0  5px;
+                width: 200px;
+              }
+        
+            button{
+                padding: 10px;
+                color: white;
+                background: #333;
+                border-radius: 0 5px 5px 0;
+                border: none;
+              }
+
             h1{
                 font-size: 18px;
                 font-weight: 500;

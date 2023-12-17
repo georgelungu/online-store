@@ -11,11 +11,15 @@ const Slider = () => {
 
     const [currentSlide, setCurrentSlide] = useState(0)
 
+    // <img src="/img/Floating_Object_B_8.png" alt="" />
+    // <img src="/img/Tea_Infuser_Strainer_1.png" alt="" />
+    // <img src="/img/Vintage_Foldable_Hanging_Lamp_6.png" alt="" />
+
     const data = [
         // All of these pictures have a width of 1600px
-        "https://images.pexels.com/photos/1549200/pexels-photo-1549200.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "https://images.pexels.com/photos/837140/pexels-photo-837140.jpeg?auto=compress&cs=tinysrgb&w=1600"
+        "/img/Floating_Object_B_8.png",
+        "/img/Tea_Infuser_Strainer_1.png",
+        "/img/Vintage_Foldable_Hanging_Lamp_6.png"
     ]
 
     const prevSlide = () => {
