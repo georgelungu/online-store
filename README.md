@@ -75,9 +75,9 @@ This command will read the package.json file in your project and install all the
     Once the dependencies are installed, you can start your projects by running the following commands:
 
 ```bash
-  npm run dev
+  for client => npm run dev
 ```
 
 ```bash
-  npm run develop
+  for server => npm run develop
 ```
