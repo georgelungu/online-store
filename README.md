@@ -8,7 +8,7 @@ Below, you'll find an overview of the key features and functionalities integrate
 
 ## Screenshots
 
-![App Screenshot]([https://images4.imagebam.com/d2/3b/51/MEPME7O_o.png](https://www.imagebam.com/view/MEQZHCP))
+![App Screenshot]([https://www.imagebam.com/view/MEQZHCP ]))
 
 # Features
 
