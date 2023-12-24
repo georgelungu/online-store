@@ -34,19 +34,23 @@ Simplify the management of product inventory by leveraging the capabilities of S
 
 # Installation
 
-## Clone the Repository:
+## 1.0 Clone the Client Repository:
 
     Before you begin, ensure that you have the following software installed on your system:
 
 Git: You can download and install [Git](https://git-scm.com/), Node.js and npm: You can download and install [Node.js](https://nodejs.org/) which includes npm.
 
-2. Clone the Repository
-
 ```bash
   git clone git@github.com:georgelungu/online-store-client.git
 ```
 
-3. Navigate to the Project Directory:
+## 1.1 Clone the Server Repository:
+
+```bash
+  git clone git@github.com:georgelungu/online-store-server.git
+```
+
+## 2. Navigate to the Project Directory:
 
     Change your current directory to the newly cloned project's directory: 
     
@@ -56,7 +60,7 @@ Git: You can download and install [Git](https://git-scm.com/), Node.js and npm: 
 
 Replace <repository_directory> with the name of the directory created when you cloned the repository.
 
-4. Install Dependencies
+## 3. Install Dependencies for both projects
 
     Use npm to install the project's dependencies. Run the following command:
 
@@ -66,10 +70,14 @@ Replace <repository_directory> with the name of the directory created when you c
 
 This command will read the package.json file in your project and install all the required packages.
 
-5. Start the Project:
+## 4. Start the Projects:
 
-    Once the dependencies are installed, you can start your project by running the following command:
+    Once the dependencies are installed, you can start your projects by running the following commands:
 
 ```bash
   npm run dev
+```
+
+```bash
+  npm run develop
 ```
